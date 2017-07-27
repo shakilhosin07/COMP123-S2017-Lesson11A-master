@@ -8,12 +8,12 @@ using System.Text;
  * Date: July 25, 2017
  * Description: This is the Deck class which inherits from the List generic collection
  * This class creates a new List type - Card
- * Version: 0.3 - Added public Shuffle method
+ * Version: 0.4 - Refactored Deck class to inherit from CardList
  */
 
 namespace COMP123_S2017_Lesson11A
 {
-    public class Deck:List<Card>
+    public class Deck: CardList
     {
         // PRIVATE INSTANCE VARIABLES
         private Random _random;
@@ -45,7 +45,7 @@ namespace COMP123_S2017_Lesson11A
         /// This is the private _initialize method that loads the deck with 52 cards.
         /// This method also initializes other class variables
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             // initialize the random object
             this._random = new Random();

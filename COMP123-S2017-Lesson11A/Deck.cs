@@ -7,7 +7,7 @@ using System.Text;
  * Name: Shakil Hosin
  * Date: July 25, 2017
  * Description: This is the Deck class it inherits from the cardlist class
- * Version: 0.4 - Refactored Deck class to inherit from CardList
+ * Version: 0.5 - Added deal1 method
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -90,6 +90,18 @@ namespace COMP123_S2017_Lesson11A
                 this[firstCard].Suit = tempCard.Suit;
             }
         }
+        /// <summary>
+        /// This method removes a card from element 0 in the list and returns this card. 
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal1()
+        {
+            Card firstCard = (Card)this[0].Clone();
+            this.RemoveAt(0); //This Removes the top card
 
+            Console.WriteLine("Deck Contains: " + this.Count + "Cards");
+
+            return firstCard;
+        }
     }
 }

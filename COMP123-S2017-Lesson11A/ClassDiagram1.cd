@@ -9,17 +9,24 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="COMP123_S2017_Lesson11A.Deck">
-    <Position X="3.25" Y="1.5" Width="1.5" />
+    <Position X="1" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAABAAAAAAAAAAAEAE=</HashCode>
       <FileName>Deck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="COMP123_S2017_Lesson11A.CardList">
-    <Position X="1" Y="1.75" Width="1.5" />
+    <Position X="1" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CardList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMP123_S2017_Lesson11A.Hand">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hand.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="COMP123_S2017_Lesson11A.Suit" Collapsed="true">

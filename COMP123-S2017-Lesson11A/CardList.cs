@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 /*
  * Name: Shakil Hosin
- * Date: July 25, 2017
+ * Date: July 27hth, 2017
  * Description: this is the abstract superclass CardList 
  * It inherits from the built-in list generic collection and consumes the card class.
  * Version: 0.1 - Created the abstract class CardList

@@ -33,6 +33,32 @@ namespace COMP123_S2017_Lesson11A
 
         //public methods
         /// <summary>
+        /// Taking in a hand object and passing it through the linq
+        /// </summary>
+        /// <param name="hand"></param>
+        public static void HighestCard(Hand hand)
+        {
+
+            Card Highest = new Card((Face)0, (Suit)1);
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (hand[i].Face >= Highest.Face)
+                {
+                    Highest = hand[i];
+                }
+            }
+            //taking the highest card from the current hand.
+            var Highestcard = from High_card in hand where High_card.Face == Highest.Face select High_card;
+
+            foreach (var item in Highestcard)
+            {
+                Console.WriteLine("The highest card in current hand is the {0} of {1}", item.Face, item.Suit);
+            }
+
+
+        }
+        /// <summary>
         /// This method overrides the built-in ToString method
         /// </summary>
         /// <returns></returns>
@@ -51,3 +77,5 @@ namespace COMP123_S2017_Lesson11A
         }
     }
 }
+
+ 

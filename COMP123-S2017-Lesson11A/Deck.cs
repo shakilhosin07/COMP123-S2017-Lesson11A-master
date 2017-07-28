@@ -7,7 +7,7 @@ using System.Text;
  * Name: Shakil Hosin
  * Date: July 25, 2017
  * Description: This is the Deck class it inherits from the cardlist class
- * Version: 0.6 - Added deal5 method which is adding the deal1 method 5 times and storing it in the hand collection.
+ * Version: 0.7 -Changed the deal5 method to type hand because it has to be passed through the highest card method as a hand.
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -99,12 +99,12 @@ namespace COMP123_S2017_Lesson11A
 
             Card firstCard = (Card)this[0].Clone();
             this.RemoveAt(0); //This Removes the top card
+            //Console.WriteLine("Deck Contains: " + this.Count + " Cards");
 
-            
             return firstCard;
         }
         
-        public Card Deal5()
+        public Hand Deal5()
         {
 
             Hand hand = new Hand();
@@ -112,9 +112,9 @@ namespace COMP123_S2017_Lesson11A
             {
                 hand.Add(Deal1());
             }
+            Console.WriteLine("Deck Contains: " + this.Count + " Cards");
             Console.WriteLine(hand);
-            Console.WriteLine("Deck Contains: " + this.Count + " Cards.");
-            return null;
+            return hand;
         }
     }
 }

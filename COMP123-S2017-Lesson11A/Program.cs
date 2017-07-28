@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Name: Shakil Hosin
  * Date: July 25, 2017
  * Description: Demo for Lesson 11
- * Version: 0.5 - Tested the deal5 method which was made in the deck class
+ * Version: 0.6 - Creating a new hand object to deal 5 cards to
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -20,9 +20,9 @@ namespace COMP123_S2017_Lesson11A
             Hand hand = new Hand();// new empty hand container;
 
             Deck deck = new Deck();
-            Console.WriteLine(deck.ToString()+"\n");
+            Console.WriteLine(deck.ToString() + "\n");
             deck.Shuffle();
-            Console.WriteLine(deck.ToString()+"\n");
+            Console.WriteLine(deck.ToString() + "\n");
 
             //hand = deck.deal5()
             /*
@@ -32,12 +32,17 @@ namespace COMP123_S2017_Lesson11A
 
             // hand = deck.deal5(); //creates a new hand object and assigns it to hand. 
 
-            //Dealing 5 cards 
+            //Creating a new hand object to deal 5 cards to
+            Hand h2 = new Hand();
+            h2 = deck.Deal5();
+            
+            //passing the new object through the highest card method
+            
+            Hand.HighestCard(h2);
 
-            deck.Deal5();
-         
- 
-    }
-        
+    
+            
+
+        }
     }
 }

@@ -7,12 +7,12 @@ using System.Text;
  * Name: Shakil Hosin
  * Date: July 25, 2017
  * Description: This is the Deck class it inherits from the cardlist class
- * Version: 0.5 - Added deal1 method
+ * Version: 0.6 - Added deal5 method which is adding the deal1 method 5 times and storing it in the hand collection.
  */
 
 namespace COMP123_S2017_Lesson11A
 {
-    public class Deck: CardList
+    public class Deck : CardList
     {
         // PRIVATE INSTANCE VARIABLES
         private Random _random;
@@ -48,7 +48,7 @@ namespace COMP123_S2017_Lesson11A
                 {
                     this.Add(new Card((Face)face, (Suit)suit));
                 }
-            } 
+            }
         }
 
         // PUBLIC METHODS
@@ -96,12 +96,25 @@ namespace COMP123_S2017_Lesson11A
         /// <returns></returns>
         public Card Deal1()
         {
+
             Card firstCard = (Card)this[0].Clone();
             this.RemoveAt(0); //This Removes the top card
 
-            Console.WriteLine("Deck Contains: " + this.Count + "Cards");
-
+            
             return firstCard;
+        }
+        
+        public Card Deal5()
+        {
+
+            Hand hand = new Hand();
+            for (int i = 0; i < 5; i++)
+            {
+                hand.Add(Deal1());
+            }
+            Console.WriteLine(hand);
+            Console.WriteLine("Deck Contains: " + this.Count + " Cards.");
+            return null;
         }
     }
 }
